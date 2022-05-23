@@ -8,7 +8,7 @@ auth_routes: APIRouter = APIRouter()
 
 
 @auth_routes.get('/api/login')
-def get_login_user(request: RequestFastAPI):
+def get_login_user(request: RequestFastAPI,user: str, password: str):
     # print(request.query_params['user'])
     # print(request.query_params['password'])
     valid = get_login_user_validator(request)
